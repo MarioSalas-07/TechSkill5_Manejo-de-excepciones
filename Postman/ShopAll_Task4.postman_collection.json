@@ -1,0 +1,1553 @@
+{
+	"info": {
+		"_postman_id": "fe948ad9-905c-45f3-aab8-57db58fed1c2",
+		"name": "ShopAll_Task4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14591866"
+	},
+	"item": [
+		{
+			"name": "WithOut Security",
+			"item": [
+				{
+					"name": "Persona",
+					"item": [
+						{
+							"name": "crearPersona",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Ana\",\r\n    \"apellido_paterno\": \"Gómez\",\r\n    \"apellido_materno\": \"López\",\r\n    \"calle\": \"Calle 1\",\r\n    \"num_ext\": 123,\r\n    \"num_int\": null,\r\n    \"cp\": 45678,\r\n    \"ciudad\": \"Ciudad A\",\r\n    \"telefono\": \"555-123-4567\",\r\n    \"colonia\": \"Colonia X\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/public/api/Persona",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"Persona"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "obtenerPersonas",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/public/api/Persona",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"Persona"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "obtenerPersona",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/public/api/Persona/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"Persona",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "actualizarPersona",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Ana Magdalena\",\r\n    \"apellido_paterno\": \"Gómez\",\r\n    \"apellido_materno\": \"López\",\r\n    \"calle\": \"Calle 1\",\r\n    \"num_ext\": 123,\r\n    \"num_int\": null,\r\n    \"cp\": 45678,\r\n    \"ciudad\": \"Ciudad A\",\r\n    \"telefono\": \"555-123-4567\",\r\n    \"colonia\": \"Colonia X\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/public/api/Persona/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"Persona",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "eliminarPersona",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/public/api/Persona/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"Persona",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Empresa",
+					"item": [
+						{
+							"name": "crearEmpresa",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"ElectroHogar SA\",\r\n    \"whatsApp\": 1234567890,\r\n    \"direccion\": \"Calle Principal #123\",\r\n    \"status\": 1,\r\n    \"descripcion\": \"Empresa especializada en productos electrónicos para el hogar.\",\r\n    \"imagen\": \"electrohogar.jpg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/public/api/empresa",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"empresa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "obtenerEmpresa",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/public/api/empresa",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"empresa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "obtenerEmpresa",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/public/api/empresa/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"empresa",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "actualizarEmpresa",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Productos para el hogar\",\r\n    \"whatsApp\": 9876543210,\r\n    \"direccion\": \"456 Oak Avenue, Ciudad Ejemplo\",\r\n    \"status\": 1,\r\n    \"descripcion\": \"Especialistas en productos de alta calidad para el hogar.\",\r\n    \"imagen\": \"imagen2.jpg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/public/api/empresa/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"empresa",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "eliminarEmpresa",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/public/api/empresa/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"empresa",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Usuario",
+					"item": [
+						{
+							"name": "crearUsuario",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": 1,\r\n    \"usuario\": \"usuario4\",\r\n    \"contrasenia\": \"password4\",\r\n    \"correo_electronico\": \"usuario4@example.com\",\r\n    \"persona\": {\r\n        \"id\": 4\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/public/api/usuario",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"usuario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "obtenerUsuarios",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/public/api/usuario",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"usuario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "obtenerUsuario",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/public/api/usuario/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"usuario",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "actualizarUsuario",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": 1,\r\n    \"usuario\": \"usuario4\",\r\n    \"contrasenia\": \"password4\",\r\n    \"correo_electronico\": \"usuario4@example.com\",\r\n    \"persona\": {\r\n        \"id\": 4\r\n    },\r\n    \"empresa\":{\r\n        \"id\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/public/api/usuario/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"usuario",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "eliminarUsuario",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/public/api/usuario/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"usuario",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Roles",
+					"item": [
+						{
+							"name": "CrearRol",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Vendedor\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/public/api/rol",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"rol"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "obtenerRoles",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/public/api/rol",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"rol"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "obtenerRol",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/public/api/rol/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"rol",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "actualizarRol",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Comprador impulsivo\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/public/api/rol/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"rol",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "eliminarRol",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/public/api/rol/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"rol",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Usuario tiene rol",
+					"item": [
+						{
+							"name": "asignarRol",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 4,\r\n    \"rol\": {\r\n        \"id\": 2\r\n    },\r\n    \"usuario\": {\r\n        \"id\": 4\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/public/api/usuarioRol",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"usuarioRol"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "obtenerUsuariosConRol",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/public/api/usuarioRol",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"usuarioRol"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "obtenerUsuarioConRol",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/public/api/usuarioRol/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"usuarioRol",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "actualizarUsuarioConRol",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 2,\r\n    \"rol\": {\r\n        \"id\": 1\r\n    },\r\n    \"usuario\": {\r\n        \"id\": 2\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/public/api/usuarioRol/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"usuarioRol",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "eliminarUsuarioConRol",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/public/api/usuarioRol/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"usuarioRol",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Categorias de productos",
+					"item": [
+						{
+							"name": "obtenerCategorias",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/public/api/categoriaProducto",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"categoriaProducto"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "obtenerCategoria",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/public/api/categoriaProducto/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"categoriaProducto",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Productos",
+					"item": [
+						{
+							"name": "obtenerProductos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/public/api/producto",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"producto"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "obtenerProducto",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/public/api/producto/20",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"api",
+										"producto",
+										"20"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Token",
+					"item": [
+						{
+							"name": "Generate Token",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuario\": \"usuario4\",\r\n    \"contrasenia\": \"usuario4\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/public/authenticate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"public",
+										"authenticate"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"description": "En este folder se probaran solo las apis que nonecesitan de un token de acceso\n\ntales como"
+		},
+		{
+			"name": "With Security",
+			"item": [
+				{
+					"name": "Categorias de productos",
+					"item": [
+						{
+							"name": "crearCategoria",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c3VhcmlvNCIsImlhdCI6MTY5ODc5MzE1OSwiZXhwIjoxNjk4ODIxOTU5fQ.kfDB2SIcLXtCBtDNHYyV-e97CeCRq0lPyLr2rBqrdk0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Electrodomésticos\", \r\n    \"descripcion\": \"Productos electrónicos para el hogar\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/protected/api/categoriaProducto",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"protected",
+										"api",
+										"categoriaProducto"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "actualizarCategoria",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c3VhcmlvNCIsImlhdCI6MTY5ODc5MzE1OSwiZXhwIjoxNjk4ODIxOTU5fQ.kfDB2SIcLXtCBtDNHYyV-e97CeCRq0lPyLr2rBqrdk0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Artículos de Cocina\",\r\n    \"descripcion\": \"Productos relacionados con la cocina, como ollas, sartenes, utensilios de cocina y electrodomésticos de cocina.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/protected/api/categoriaProducto/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"protected",
+										"api",
+										"categoriaProducto",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "eliminarCategoria",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyVmVuZGVkb3IxIiwiaWF0IjoxNjk4MjcwMTQ2LCJleHAiOjE2OTgyOTg5NDZ9.uRB1FhWUZ6DojFQU8zAW65WNLuSjzzPu_YCDwzLKPYo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/protected/api/categoriaProducto/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"protected",
+										"api",
+										"categoriaProducto",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Productos",
+					"item": [
+						{
+							"name": "crearProducto",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c3VhcmlvNCIsImlhdCI6MTY5ODc5MzE1OSwiZXhwIjoxNjk4ODIxOTU5fQ.kfDB2SIcLXtCBtDNHYyV-e97CeCRq0lPyLr2rBqrdk0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Refrigerador Samsung\", \r\n    \"descripcion\": \"Refrigerador de acero inoxidable con dispensador de agua\", \r\n    \"precio\": 699.99, \r\n    \"cantidad\": 10,\r\n    \"categoriaProducto\": {\r\n        \"id\": 1\r\n    },\r\n    \"usuario\": {\r\n        \"id\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/protected/api/producto",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"protected",
+										"api",
+										"producto"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "actualizarProducto",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c3VhcmlvNCIsImlhdCI6MTY5ODc5MzE1OSwiZXhwIjoxNjk4ODIxOTU5fQ.kfDB2SIcLXtCBtDNHYyV-e97CeCRq0lPyLr2rBqrdk0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Lavadora LG\",\r\n    \"descripcion\": \"Lavadora de carga frontal de 8 kg con múltiples programas de lavado.\",\r\n    \"precio\": 600,\r\n    \"cantidad\": 10,\r\n    \"categoriaProducto\": {\r\n        \"id\": 1\r\n    },\r\n    \"vendedor\": {\r\n        \"id\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/protected/api/producto/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"protected",
+										"api",
+										"producto",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "eliminarProducto",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/protected/api/producto/48",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"protected",
+										"api",
+										"producto",
+										"48"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Carrito",
+					"item": [
+						{
+							"name": "Carrito Productos",
+							"item": [
+								{
+									"name": "agregarProducto",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c3VhcmlvNCIsImlhdCI6MTY5ODc5MzE1OSwiZXhwIjoxNjk4ODIxOTU5fQ.kfDB2SIcLXtCBtDNHYyV-e97CeCRq0lPyLr2rBqrdk0",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"cantidad\": 5,\r\n    \"carrito\": {\r\n        \"id\": 1\r\n    },\r\n    \"producto\": {\r\n        \"id\": 20\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/protected/api/carritoProductos",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"protected",
+												"api",
+												"carritoProductos"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "obtenerProductosByCarrito",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c3VhcmlvNCIsImlhdCI6MTY5ODg2MDE4OSwiZXhwIjoxNjk4ODg4OTg5fQ.wLee6VQPBa5N00FXeqeraNCNK0d1wLfMQd-TiAuhPiM",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:8080/protected/api/carritoProductos/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"protected",
+												"api",
+												"carritoProductos",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "actualizarCantidadProducto",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c3VhcmlvNCIsImlhdCI6MTY5ODg2NzE3MCwiZXhwIjoxNjk4ODk1OTcwfQ.HtIOORxyzr37pnjNn-nPNhwKCIxR-GfwjGTRreCZ9G4",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/protected/api/carritoProductos/carrito/1/producto/1?nuevaCantidad=2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"protected",
+												"api",
+												"carritoProductos",
+												"carrito",
+												"1",
+												"producto",
+												"1"
+											],
+											"query": [
+												{
+													"key": "nuevaCantidad",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "eliminarProductoCarrrito",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/protected/api/carritoProductos/48",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"protected",
+												"api",
+												"carritoProductos",
+												"48"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "crearCarrito",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c3VhcmlvNCIsImlhdCI6MTY5ODc5MzE1OSwiZXhwIjoxNjk4ODIxOTU5fQ.kfDB2SIcLXtCBtDNHYyV-e97CeCRq0lPyLr2rBqrdk0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuario\": {\r\n        \"id\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/protected/api/carrito",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"protected",
+										"api",
+										"carrito"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "obtenerCarrito",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c3VhcmlvNCIsImlhdCI6MTY5ODg2MDE4OSwiZXhwIjoxNjk4ODg4OTg5fQ.wLee6VQPBa5N00FXeqeraNCNK0d1wLfMQd-TiAuhPiM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/protected/api/carrito/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"protected",
+										"api",
+										"carrito",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Transacciones",
+					"item": [
+						{
+							"name": "realizarTransaccion",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c3VhcmlvNCIsImlhdCI6MTY5ODg2OTMxMiwiZXhwIjoxNjk4ODk4MTEyfQ.lR_EzH43swr-ScZ3iiVHJn9v3ZwPcLHAReIcpQveKyw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"monto_total\": null,\r\n  \"direccion_envio\": \"123 Calle Principal, Ciudad Ejemplo\",\r\n  \"fecha\": null,\r\n  \"carrito\": {\r\n        \"id\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/protected/api/transaccion",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"protected",
+										"api",
+										"transaccion"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "obtenerTransacciones",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c3VhcmlvNCIsImlhdCI6MTY5ODg2OTMxMiwiZXhwIjoxNjk4ODk4MTEyfQ.lR_EzH43swr-ScZ3iiVHJn9v3ZwPcLHAReIcpQveKyw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/protected/api/transaccion/usuario/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"protected",
+										"api",
+										"transaccion",
+										"usuario",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "obtenerProductosPorCarritoId",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c3VhcmlvNCIsImlhdCI6MTY5ODg4MDkzMiwiZXhwIjoxNjk4OTA5NzMyfQ.2sbLaESKxRaK6R878HU9yg_fbkwyty1Pxg9aBuILAec",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/protected/api/transaccion/carritoTransaccion/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"protected",
+										"api",
+										"transaccion",
+										"carritoTransaccion",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Comentarios de los productos",
+					"item": [
+						{
+							"name": "crearComentario",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c3VhcmlvNCIsImlhdCI6MTY5ODg4MDkzMiwiZXhwIjoxNjk4OTA5NzMyfQ.2sbLaESKxRaK6R878HU9yg_fbkwyty1Pxg9aBuILAec",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"calificacion\": 5,\r\n  \"comentario\": \"¡Excelente producto! Estoy muy satisfecho con mi compra.\",\r\n  \"usuario\": {\r\n        \"id\": 1\r\n    },\r\n  \"producto\": {\r\n        \"id\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/protected/api/comentario",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"protected",
+										"api",
+										"comentario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "obtenerComentarioByProducto",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c3VhcmlvNCIsImlhdCI6MTY5ODg4MDkzMiwiZXhwIjoxNjk4OTA5NzMyfQ.2sbLaESKxRaK6R878HU9yg_fbkwyty1Pxg9aBuILAec",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/protected/api/comentario/producto/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"protected",
+										"api",
+										"comentario",
+										"producto",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "actualizarComentario",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c3VhcmlvNCIsImlhdCI6MTY5ODg4MDkzMiwiZXhwIjoxNjk4OTA5NzMyfQ.2sbLaESKxRaK6R878HU9yg_fbkwyty1Pxg9aBuILAec",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"calificacion\": 4,\r\n  \"comentario\": \"¡Excelente producto! Estoy muy satisfecho con mi compra.\",\r\n  \"usuario\": {\r\n        \"id\": 1\r\n    },\r\n  \"producto\": {\r\n        \"id\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/protected/api/comentario/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"protected",
+										"api",
+										"comentario",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "eliminarComentario",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/protected/api/comentario/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"protected",
+										"api",
+										"comentario",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyVmVuZGVkb3IxIiwiaWF0IjoxNjk4MjcwMTQ2LCJleHAiOjE2OTgyOTg5NDZ9.uRB1FhWUZ6DojFQU8zAW65WNLuSjzzPu_YCDwzLKPYo",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
